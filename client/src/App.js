@@ -1,8 +1,9 @@
 import React  from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Chat from './components/Chat/Chat';
 
+import Chat from './components/Chat/Chat';
 import Join from './components/Join/Join'
+
 import './App.css';
 
 function App() {

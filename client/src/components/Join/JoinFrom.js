@@ -24,7 +24,7 @@ const JoinForm = () => {
                     className="Room-input"
                     onChange={(event) => setRoom(event.target.value)}
                 />
-                <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chatPage?name=${name}&room=${room}`}>
+                <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/Chat?name=${name}&room=${room}`}>
                     <button type="submit" className="buttons">
                         <button className="btn add-chat-btn">
                         Submit
