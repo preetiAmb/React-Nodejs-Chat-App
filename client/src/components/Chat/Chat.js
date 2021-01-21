@@ -6,6 +6,7 @@ import io from 'socket.io-client';
 import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
+import Header from '../Header/Header';
 
 import './Chat.css';  
 
@@ -23,7 +24,6 @@ const Chat = () => {
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
-        console.log( name, room );
 
         socket = io(ENDPOINT);
 
@@ -59,12 +59,13 @@ const Chat = () => {
         <div className="container">
             <div className="app-wrapper">
                 <div className="main">
-                <InfoBar />
+                    <Header />
+                    <InfoBar />
                     <Messages messages={messages} name={name} />
-                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />     
+                    <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />     
                 </div>
             </div>
-            </div>
+        </div>
 
     )
 }
