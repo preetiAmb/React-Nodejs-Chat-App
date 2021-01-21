@@ -12,5 +12,10 @@ Chat app build with React and node.js
 
 Features
 1. Login page
-2. Chat room - default admin message
+2. Chat room 
+  - Displays default admin message
+  - Has a pre-chosen name (admin)
+  - Project runs on "npm run dev"
+
+
 
