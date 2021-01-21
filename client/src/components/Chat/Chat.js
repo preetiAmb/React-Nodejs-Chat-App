@@ -4,7 +4,6 @@ import queryString from 'query-string';
 import io from 'socket.io-client';
 
 import Messages from '../Messages/Messages';
-import DummyChat from './DummyChat';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 
@@ -20,8 +19,8 @@ const Chat = () => {
     const [ message, setMessage ] = useState('');
     const [ messages, setMessages] = useState([]);
     
-
     const ENDPOINT = 'localhost:5000';
+
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
         console.log( name, room );
@@ -55,14 +54,12 @@ const Chat = () => {
             socket.emit('sendMessage', message, () => setMessage(''));
         }
     }
-    console.log(message, messages);
   
     return (
         <div className="container">
             <div className="app-wrapper">
                 <div className="main">
                 <InfoBar />
-                <DummyChat className="chat_list" />
                     <Messages messages={messages} name={name} />
                         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />     
                 </div>
