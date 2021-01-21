@@ -4,11 +4,14 @@ import queryString from 'query-string';
 import io from 'socket.io-client';
 
 import Messages from '../Messages/Messages';
+import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
+
+import './Chat.css';
 
 let socket;
 
-const ChatForm = () => {
+const Chat = () => {
     const location = useLocation()
     const [ name, setName] = useState('');
     const [ room, setRoom] = useState('');
@@ -54,15 +57,17 @@ const ChatForm = () => {
     console.log(message, messages);
   
     return (
-        <div>
-            <div className="list">
-                <ul className="list">
+        <div className="container">
+            <div className="app-wrapper">
+                <div className="main">
+                <InfoBar />
                     <Messages messages={messages} name={name} />
-                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
-                </ul>
-             </div>
-        </div>
+                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />     
+                </div>
+            </div>
+            </div>
+
     )
 }
 
-export default ChatForm
+export default Chat
