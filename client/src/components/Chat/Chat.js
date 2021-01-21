@@ -40,16 +40,12 @@ const Chat = () => {
 
     useEffect(() => {
         socket.on('message', message => {
-            setMessages([ ...messages, message ]);
-        });
-
-        return() => {
-            socket.off()
-        },[messages]
-        /* socket.on('roomData', ({ users }) => {
-            setUsers(users);
-        }); */
-    }, [messages]);
+          setMessages([...messages, message])
+        })
+        return () => {
+          socket.off()
+        }
+      }, [messages])
    
 
     const sendMessage = (event) => {
