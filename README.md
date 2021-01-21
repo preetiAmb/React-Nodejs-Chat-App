@@ -1,5 +1,6 @@
-# React-Nodejs-Chat-App
-# Chat app build with React and node.js
+React-Nodejs-Chat-App
+
+Chat app build with React and node.js
 
 1. React/ react hooks for frontend
 2. Node.js for backend
