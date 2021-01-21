@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import io from 'socket.io-client';
 
 import Messages from '../Messages/Messages';
+import DummyChat from './DummyChat';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 
@@ -15,7 +16,7 @@ const Chat = () => {
     const location = useLocation()
     const [ name, setName] = useState('');
     const [ room, setRoom] = useState('');
-    const [users, setUsers] = useState('');
+    const [ users, setUsers] = useState('');
     const [ message, setMessage ] = useState('');
     const [ messages, setMessages] = useState([]);
     const ENDPOINT = 'localhost:3000';
@@ -61,6 +62,7 @@ const Chat = () => {
             <div className="app-wrapper">
                 <div className="main">
                 <InfoBar />
+                <DummyChat className="chat_list" />
                     <Messages messages={messages} name={name} />
                         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />     
                 </div>
