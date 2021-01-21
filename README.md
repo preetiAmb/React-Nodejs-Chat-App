@@ -1,5 +1,7 @@
 React-Nodejs-Chat-App
 
+Run "npm run dev" to start the server 
+
 Chat app build with React and node.js
 
 1. React/ react hooks for frontend
