@@ -7,3 +7,8 @@ Chat app build with React and node.js
 3. Socket.io
 4. Heruko for deployment 
 
+
+Features
+1. Login page
+2. Chat room - default admin message
+
