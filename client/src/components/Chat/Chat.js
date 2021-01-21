@@ -8,7 +8,7 @@ import DummyChat from './DummyChat';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 
-import './Chat.css';
+import './Chat.css';  
 
 let socket;
 
@@ -19,8 +19,9 @@ const Chat = () => {
     const [ users, setUsers] = useState('');
     const [ message, setMessage ] = useState('');
     const [ messages, setMessages] = useState([]);
-    const ENDPOINT = 'localhost:3000';
+    
 
+    const ENDPOINT = 'localhost:5000';
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
         console.log( name, room );
@@ -42,9 +43,12 @@ const Chat = () => {
             setMessages([ ...messages, message ]);
         });
 
-        socket.on('roomData', ({ users }) => {
+        return() => {
+            socket.off()
+        },[messages]
+        /* socket.on('roomData', ({ users }) => {
             setUsers(users);
-        });
+        }); */
     }, [messages]);
    
 
