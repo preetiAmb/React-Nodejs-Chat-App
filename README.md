@@ -4,7 +4,9 @@ Chat app build with React and node.js
 
 1. React hooks for frontend
 2. Node.js for backend
-3. Socket.io to create realtime web applications
+3. Style components for styling
+4. Socket.io to create realtime web applications
+5. Heroku for deployment: https://chataround.herokuapp.com/
 
 Features
 1. Login page 
