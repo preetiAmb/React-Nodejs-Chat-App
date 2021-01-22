@@ -1,16 +1,20 @@
 React-Nodejs-Chat-App
 
-Run "npm run dev" to start the server 
-
 Chat app build with React and node.js
 
-1. React/ react hooks for frontend
+1. React hooks for frontend
 2. Node.js for backend
-3. Socket.io
-4. Heruko for deployment 
-
+3. Socket.io to create realtime web applications
 
 Features
-1. Login page
-2. Chat room - default admin message
+1. Login page 
+   * simple login with name and room
+2. Chat room 
+   * Displays default admin message
+   * Has a pre-chosen name (admin)
+   * Project runs on "npm run dev"
+  
+Note: Need to run npm install in the client folder too!
+
+
 
