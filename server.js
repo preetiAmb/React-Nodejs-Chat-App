@@ -13,10 +13,10 @@ const server = http.createServer(app);
 const io = socketio(server, {cors:{origin:"*"}}) 
 
 app.use(cors());
-app.use(router);
+//app.use(router);
 
-if(process.env.NODE_ENV === 'productio') {
-  
+if(process.env.NODE_ENV === 'production') {
+
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) => {
