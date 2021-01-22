@@ -1,6 +1,7 @@
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
+const path = require('path');
 const cors = require('cors');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
@@ -11,9 +12,10 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server, {cors:{origin:"*"}}) 
 
-
 app.use(cors());
 app.use(router);
+
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 io.on('connect', (socket) => {
   console.log("We have a new connection!!!");
