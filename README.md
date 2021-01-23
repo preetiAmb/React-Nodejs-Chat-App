@@ -7,6 +7,7 @@ Chat app build with React and node.js
 3. Style components for styling
 4. Socket.io to create realtime web applications
 5. Heroku for deployment: https://chataround.herokuapp.com/
+6. Draw io for wireframe: https://app.diagrams.net/?src=about#DChat-app
 
 Features
 1. Login page 
@@ -17,6 +18,8 @@ Features
    * Project runs on "npm run dev"
   
 Note: Need to run npm install in the client folder too!
+
+
 
 
 
