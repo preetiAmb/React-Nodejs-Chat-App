@@ -13,7 +13,7 @@ export const UserNameInput = styled.input`
     outline: none;
     border-radius: 20px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    margin-top: 13rem;
+    margin-top: 12rem;
 `;
   
 export const RoomInput = styled.input`
