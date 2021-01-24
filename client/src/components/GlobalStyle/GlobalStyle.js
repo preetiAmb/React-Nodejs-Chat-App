@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
   background: linear-gradient(100deg, rgb(221, 219, 220) 50%, #ffffff 0);
   width: 100%;
@@ -7,7 +8,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
 `;
 
 export const Wrapper = styled.div`
@@ -19,7 +19,6 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
   border-radius: 5px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-
 `;
 
 export const Main = styled.div`

@@ -6,14 +6,11 @@ const cors = require('cors');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
-//const router = require('./router');
-
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server, {cors:{origin:"*"}}) 
 
 app.use(cors());
-//app.use(router);
 
 if(process.env.NODE_ENV === 'production') {
 

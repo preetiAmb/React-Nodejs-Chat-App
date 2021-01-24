@@ -16,7 +16,6 @@ const Chat = () => {
     const location = useLocation()
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
-    const [users, setUsers] = useState('');
     const [message, setMessage ] = useState('');
     const [ messages, setMessages] = useState([]); 
     const ENDPOINT = 'https://chataround.herokuapp.com/';
