@@ -1,23 +1,22 @@
 import React from 'react';
 
-import './Input.css';
+import { Form, InputStyle, Button, AddChatBtn } from './Input-style';
 
 const Input = ({ message, setMessage, sendMessage }) => (
-  <form className="form">
-      <input
-        className="chat-input"
+  <Form>
+      <InputStyle
         type="text"
         placeholder="Type a message..."
         value={message}
         onChange={(event) => setMessage(event.target.value)}
         onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
       />
-      <button type="submit" className="buttons" onClick={(event) => sendMessage(event)}>
-        <button className="btn add-chat-btn">
+      <Button type="submit" className="buttons" onClick={(event) => sendMessage(event)}>
+        <AddChatBtn>
             Send
-        </button>
-      </button>
-  </form>
+        </AddChatBtn>
+      </Button>
+  </Form>
 )
 
 export default Input;

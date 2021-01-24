@@ -2,19 +2,19 @@ import React from 'react'
 import profile from '../../icons/profile.png';
 import closeIcon from '../../icons/closeIcon.png';
 
-import './InfoBar.css';
+import { InfoBarStyle, LeftInnerContainer, RightInnerContainer, OnlineIcon} from './InfoBar-style.js';
 
 const InfoBar = ({ room }) => {
     return (
-        <div className="infoBar">
-            <div className="leftInnerContainer">
-                <img className="onlineIcon" src={profile} alt="online icon" />
+        <InfoBarStyle>
+            <LeftInnerContainer>
+                <OnlineIcon src={profile} alt="online icon" />
                     <h3>{room}</h3>
-            </div>
-            <div className="rightInnerContainer">
+            </LeftInnerContainer>
+            <RightInnerContainer>
                 <a href="/"><img src={closeIcon} alt="close icon" /></a>
-            </div>
-        </div>
+            </RightInnerContainer>
+        </InfoBarStyle>
     )
 }
 

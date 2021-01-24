@@ -8,7 +8,7 @@ import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import Header from '../Header/Header';
 
-import './Chat.css';  
+import { Container, Wrapper, Main } from '../GlobalStyle/GlobalStyle'; 
 
 let socket;
 
@@ -55,16 +55,16 @@ const Chat = () => {
     }
   
     return (
-        <div className="container">
-            <div className="app-wrapper">
-                <div className="main">
+        <Container>
+            <Wrapper>
+                <Main>
                     <Header />
                     <InfoBar room={room}/>
                     <Messages messages={messages} name={name} />
                     <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />     
-                </div>
-            </div>
-        </div>
+                </Main>
+            </Wrapper>
+        </Container>
 
     )
 }

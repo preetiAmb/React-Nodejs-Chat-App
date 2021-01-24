@@ -10,8 +10,6 @@ export const Container = styled.div`
 
 `;
 
-
-
 export const Wrapper = styled.div`
   background-color: #ffffff;
   width: 25%;
@@ -24,13 +22,10 @@ export const Wrapper = styled.div`
 
 `;
 
-
-
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: space-between;
   margin-bottom: 50px;
   width: 100%;
-
 `;

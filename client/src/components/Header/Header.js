@@ -1,11 +1,11 @@
 import React from 'react';
-import './Header.css';
+import { HeaderStyle } from './Header-style.js';
 
 const Header = () => {
   return (
-    <div className='header'>
-      <h1>Chat Room</h1>
-    </div>
+    <HeaderStyle>
+      Chat Room
+    </HeaderStyle>
   )
 }
 

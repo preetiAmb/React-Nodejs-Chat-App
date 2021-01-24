@@ -1,4 +1,6 @@
-.infoBar {
+import styled from 'styled-components';
+
+export const InfoBarStyle = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,23 +19,23 @@
     outline: none;
     border-radius: 20px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  }
+`;
   
-  .leftInnerContainer {
+export const LeftInnerContainer = styled.div`
     flex: 0.5;
     display: flex;
     align-items: center;
     margin-left: 5%;
     color: bl;
-  }
+`;
   
-  .rightInnerContainer {
+export const RightInnerContainer = styled.div`
     display: flex;
     flex: 0.5;
     justify-content: flex-end;
     margin-right: 5%;
-  }
+`;
   
-  .onlineIcon {
+export const OnlineIcon = styled.img`
     margin-right: 5%;
-  }
+`;

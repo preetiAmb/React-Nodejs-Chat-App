@@ -1,12 +1,14 @@
-.form {
+import styled from 'styled-components';
+
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 2px;
-}
+`;
 
-.chat-input {
+export const InputStyle = styled.input`
     width: 300px;
     min-width: 250px;
     padding: 15px 10px 10px 20px;
@@ -21,9 +23,9 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     margin-top: 12rem;
     position: relative;
-  }
+  `;
 
-  .buttons {
+  export const Button = styled.button`
     display: flex;
     padding-left: 1rem;
     margin-top: 1rem;
@@ -33,9 +35,9 @@
     position: -webkit-sticky;
     position: sticky;
     position: relative;
-  }
+  `;
   
-  .add-chat-btn {
+  export const AddChatBtn = styled.button`
     min-width: 100px;
     background-color: #262425;
     height: 25px;
@@ -49,4 +51,4 @@
     cursor: pointer;
     position: -webkit-sticky;
     position: sticky;
-  }
+  `;
